@@ -3,109 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>হালাল রিকমেন্ডেশন হাব // কিতাব ও লাইফস্টাইল</title>
-  <!-- Tailwind CSS CDN -->
+  <title>হালাল রিকমেন্ডেশন হাব | ইসলামিক রিসোর্স</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Hind Siliguri', sans-serif; }
   </style>
 </head>
-<body class="bg-[#0f1117] text-gray-100 min-h-screen py-10 px-4 sm:px-6">
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen py-8 px-4 sm:px-6 antialiased">
 
-  <!-- কন্টেইনার -->
-  <div class="max-w-2xl mx-auto space-y-8">
+  <div class="max-w-3xl mx-auto space-y-8">
 
-    <!-- প্রোফাইল / হেডার সেকশন -->
+    <!-- হেডার -->
     <header class="text-center space-y-3">
-      <div class="inline-block p-1 rounded-full bg-gradient-to-tr from-emerald-500 to-teal-400">
-        <div class="w-20 h-20 rounded-full bg-[#181a20] flex items-center justify-center text-3xl">
-          📖
-        </div>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> ভেরিফাইড রিসোর্স হাব
       </div>
-      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">ইসলামিক রিসোর্স ও বই সমগ্র</h1>
-      <p class="text-sm sm:text-base text-gray-400 max-w-md mx-auto">
-        ভিডিও এবং পোস্টে উল্লেখিত বাছাইকৃত প্রয়োজনীয় ইসলামিক বই, তাফসীর ও সুন্নাহ সামগ্রীর বিশ্বস্ত তালিকা।
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">ইসলামিক রিসোর্স ও বুক হাব</h1>
+      <p class="text-sm sm:text-base text-slate-400 max-w-lg mx-auto">
+        আমাদের ভিডিও ও পোস্টে উল্লেখিত নির্ভরযোগ্য ইসলামিক বই, তাফসীর ও সুন্নাহ লাইফস্টাইল সামগ্রী।
       </p>
     </header>
 
-    <!-- ফিচার্ড / রিসেন্ট ভিডিও কার্ড -->
-    <div class="bg-[#181b24] border border-emerald-500/30 rounded-2xl p-5 shadow-lg relative overflow-hidden">
-      <div class="absolute top-0 right-0 bg-emerald-500 text-black text-xs font-bold px-3 py-1 rounded-bl-lg">
-        সাম্প্রতিক ভিডিওতে উল্লেখিত
-      </div>
-      <div class="flex flex-col sm:flex-row gap-4 items-center mt-2">
-        <div class="w-full sm:w-28 h-36 bg-[#222634] rounded-xl flex items-center justify-center text-4xl overflow-hidden shrink-0">
-          <!-- বইয়ের ছবি লিংক বসান -->
-          📚
+    <!-- ফিচার্ড আইটেম (বড় কার্ড) -->
+    <div class="bg-gradient-to-b from-slate-800/80 to-slate-900/80 border border-emerald-500/30 rounded-2xl p-5 sm:p-6 shadow-2xl relative backdrop-blur-sm">
+      <span class="absolute top-3 right-3 bg-emerald-500 text-slate-950 text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+        রিসেন্ট ভিডিও স্পেশাল
+      </span>
+
+      <div class="flex flex-col sm:flex-row gap-5 items-center mt-2 sm:mt-0">
+        <!-- বইয়ের কভার ইমেজ -->
+        <div class="w-28 h-40 sm:w-32 sm:h-44 bg-slate-800 rounded-lg overflow-hidden shrink-0 shadow-lg border border-slate-700">
+          <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80" alt="রাহে বেলায়াত" class="w-full h-full object-cover">
         </div>
+
         <div class="space-y-2 text-center sm:text-left flex-1">
-          <h2 class="text-lg font-bold text-white">রাহে বেলায়াত (ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর)</h2>
-          <p class="text-xs sm:text-sm text-gray-400">
-            দোয়া, যিকির ও সুন্নাহ ভিত্তিক আমলের সবচেয়ে নির্ভরযোগ্য ও রেফারেন্সযুক্ত কিতাব।
+          <div class="flex items-center justify-center sm:justify-start gap-1 text-amber-400 text-xs">
+            ★★★★★ <span class="text-slate-400 text-xs ml-1">(৪.৯/৫ রেটিং)</span>
+          </div>
+          <h2 class="text-xl font-bold text-white leading-snug">রাহে বেলায়াত — ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর</h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            কুরআন ও সুন্নাহর আলোকে সহীহ দু'আ ও যিকিরের সবচেয়ে বিশুদ্ধ ও তথ্যবহুল কিতাব।
           </p>
-          <!-- আপনার রকমারি/ওয়াফিলাইফ অ্যাফিলিয়েট লিংক href-এ দিন -->
-          <a href="https://www.rokomari.com/your-affiliate-link" target="_blank" 
-             class="inline-block w-full sm:w-auto text-center bg-emerald-500 hover:bg-emerald-600 text-black font-semibold text-sm px-5 py-2.5 rounded-xl transition duration-200">
-            রকমারি থেকে সংগ্রহ করুন →
-          </a>
+          <div class="pt-2">
+            <a href="https://www.rokomari.com" target="_blank" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-sm px-6 py-2.5 rounded-xl transition duration-200 shadow-lg shadow-emerald-500/20">
+              রকমারি থেকে অর্ডার করুন
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- প্রোডাক্ট গ্রিড -->
+    <!-- প্রোডাক্ট গ্রিড (২ কলাম) -->
     <div class="space-y-4">
-      <h3 class="text-lg font-bold text-gray-300 border-l-4 border-emerald-500 pl-3">নির্বাচিত বই ও সামগ্রী</h3>
-
-      <!-- আইটেম কার্ড ১ -->
-      <div class="bg-[#181b24] border border-gray-800 hover:border-gray-700 rounded-2xl p-4 flex gap-4 items-center transition">
-        <div class="w-20 h-24 bg-[#222634] rounded-lg flex items-center justify-center text-2xl shrink-0">
-          📕
-        </div>
-        <div class="flex-1 min-w-0">
-          <span class="text-[11px] font-semibold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded">সিরাত গ্রন্থ</span>
-          <h4 class="text-base font-bold text-white truncate mt-1">আর-রাহীকুল মাখতূম</h4>
-          <p class="text-xs text-gray-400 line-clamp-1">রাসূলুল্লাহ (সা.)-এর জীবনের সেরা প্রামাণ্য জীবনী গ্রন্থ।</p>
-          <a href="https://your-affiliate-link-here.com" target="_blank" class="inline-block mt-2 text-xs font-semibold text-emerald-400 hover:underline">
-            সংগ্রহ করুন &rarr;
-          </a>
-        </div>
+      <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <span class="w-2.5 h-2.5 rounded-sm bg-emerald-500"></span>প্রয়োজনীয় কিতাব ও পণ্য
+        </h3>
+        <span class="text-xs text-slate-400">বাছাইকৃত কালেকশন</span>
       </div>
 
-      <!-- আইটেম কার্ড ২ -->
-      <div class="bg-[#181b24] border border-gray-800 hover:border-gray-700 rounded-2xl p-4 flex gap-4 items-center transition">
-        <div class="w-20 h-24 bg-[#222634] rounded-lg flex items-center justify-center text-2xl shrink-0">
-          🍯
-        </div>
-        <div class="flex-1 min-w-0">
-          <span class="text-[11px] font-semibold text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded">সুন্নাহ খাদ্য</span>
-          <h4 class="text-base font-bold text-white truncate mt-1">খাঁটি সুন্দরবনের প্রাকৃতিক মধু</h4>
-          <p class="text-xs text-gray-400 line-clamp-1">১০০% প্রাকৃতিক ও পিওর কাঁচা মধু।</p>
-          <a href="https://your-affiliate-link-here.com" target="_blank" class="inline-block mt-2 text-xs font-semibold text-amber-400 hover:underline">
-            অর্ডার লিংক &rarr;
-          </a>
-        </div>
-      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-      <!-- আইটেম কার্ড ৩ -->
-      <div class="bg-[#181b24] border border-gray-800 hover:border-gray-700 rounded-2xl p-4 flex gap-4 items-center transition">
-        <div class="w-20 h-24 bg-[#222634] rounded-lg flex items-center justify-center text-2xl shrink-0">
-          📿
+        <!-- কার্ড ১ -->
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-slate-700 rounded-xl p-4 flex gap-3.5 items-center transition group">
+          <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=200&q=80" alt="সিরাত" class="w-16 h-22 object-cover rounded shadow border border-slate-700 shrink-0">
+          <div class="flex-1 min-w-0 space-y-1">
+            <span class="text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">সিরাত গ্রন্থ</span>
+            <h4 class="text-sm font-bold text-white truncate group-hover:text-emerald-400 transition">আর-রাহীকুল মাখতূম</h4>
+            <p class="text-xs text-slate-400 line-clamp-1">রাসূলুল্লাহ (সা.)-এর প্রামাণ্য জীবনী</p>
+            <a href="https://your-link.com" target="_blank" class="inline-block text-xs font-semibold text-emerald-400 hover:text-emerald-300 pt-1">
+              সংগ্রহ করুন &rarr;
+            </a>
+          </div>
         </div>
-        <div class="flex-1 min-w-0">
-          <span class="text-[11px] font-semibold text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded">ইবাদত অনুষঙ্গ</span>
-          <h4 class="text-base font-bold text-white truncate mt-1">রিচার্জেবল ডিজিটাল তাসবিহ</h4>
-          <p class="text-xs text-gray-400 line-clamp-1">সাইলেন্ট বাটন ও এলইডি ডিসপ্লেযুক্ত ফিঙ্গার কাউন্টার।</p>
-          <a href="https://your-affiliate-link-here.com" target="_blank" class="inline-block mt-2 text-xs font-semibold text-cyan-400 hover:underline">
-            দারাজ থেকে কিনুন &rarr;
-          </a>
+
+        <!-- কার্ড ২ -->
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-slate-700 rounded-xl p-4 flex gap-3.5 items-center transition group">
+          <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=200&q=80" alt="মধু" class="w-16 h-22 object-cover rounded shadow border border-slate-700 shrink-0">
+          <div class="flex-1 min-w-0 space-y-1">
+            <span class="text-[10px] font-semibold text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded">সুন্নাহ খাদ্য</span>
+            <h4 class="text-sm font-bold text-white truncate group-hover:text-amber-400 transition">প্রাকৃতিক সুন্দরবনের মধু</h4>
+            <p class="text-xs text-slate-400 line-clamp-1">১০০% পিওর ও র-হানি</p>
+            <a href="https://your-link.com" target="_blank" class="inline-block text-xs font-semibold text-amber-400 hover:text-amber-300 pt-1">
+              অর্ডার করুন &rarr;
+            </a>
+          </div>
         </div>
+
+        <!-- কার্ড ৩ -->
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-slate-700 rounded-xl p-4 flex gap-3.5 items-center transition group">
+          <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=200&q=80" alt="তাসবিহ" class="w-16 h-22 object-cover rounded shadow border border-slate-700 shrink-0">
+          <div class="flex-1 min-w-0 space-y-1">
+            <span class="text-[10px] font-semibold text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded">ইবাদত সামগ্রী</span>
+            <h4 class="text-sm font-bold text-white truncate group-hover:text-cyan-400 transition">ডিজিটাল স্মার্ট তাসবিহ</h4>
+            <p class="text-xs text-slate-400 line-clamp-1">সাইলেন্ট বাটন ও এলইডি ডিসপ্লে</p>
+            <a href="https://your-link.com" target="_blank" class="inline-block text-xs font-semibold text-cyan-400 hover:text-cyan-300 pt-1">
+              বিস্তারিত দেখুন &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- কার্ড ৪ -->
+        <div class="bg-slate-900/60 border border-slate-800 hover:border-slate-700 rounded-xl p-4 flex gap-3.5 items-center transition group">
+          <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=200&q=80" alt="বই" class="w-16 h-22 object-cover rounded shadow border border-slate-700 shrink-0">
+          <div class="flex-1 min-w-0 space-y-1">
+            <span class="text-[10px] font-semibold text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded">আত্মশুদ্ধি</span>
+            <h4 class="text-sm font-bold text-white truncate group-hover:text-purple-400 transition">পাপ মোচনের উপায়</h4>
+            <p class="text-xs text-slate-400 line-clamp-1">হৃদয় শীতলকারী নসীহত গ্রন্থ</p>
+            <a href="https://your-link.com" target="_blank" class="inline-block text-xs font-semibold text-purple-400 hover:text-purple-300 pt-1">
+              সংগ্রহ করুন &rarr;
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <!-- ফুটার ও ডিসক্লেইমার -->
-    <footer class="text-center text-xs text-gray-500 pt-6 border-t border-gray-800/80 space-y-2">
-      <p>স্বচ্ছতা বিজ্ঞপ্তি: প্রদত্ত লিংকগুলো অ্যাফিলিয়েট লিংক। এখান থেকে ক্রয় করলে আপনার অতিরিক্ত খরচ ছাড়াই আমরা একটি সামান্য কমিশন পাই।</p>
+    <!-- ফুটার -->
+    <footer class="text-center text-xs text-slate-500 pt-6 border-t border-slate-800/80 space-y-2">
+      <p>স্বচ্ছতা বিজ্ঞপ্তি: এখানে ব্যবহৃত কিছু লিংক অ্যাফিলিয়েট লিংক।</p>
       <p>&copy; 2026 আপনার পেজের নাম • সর্বস্বত্ব সংরক্ষিত</p>
     </footer>
 
