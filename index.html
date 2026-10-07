@@ -3,393 +3,319 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>প্রিমিয়াম কালেকশন | অফিশিয়াল ল্যান্ডিং পেজ</title>
+  <title>হালাল রিসোর্স ও বুক হাব | রিকমেন্ডেড কালেকশন</title>
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Google Fonts (Hind Siliguri) -->
+  <!-- Google Fonts: Hind Siliguri -->
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     body { font-family: 'Hind Siliguri', sans-serif; }
-    .animate-pulse-slow { animation: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    .bg-hub-gradient { background: radial-gradient(circle at top, #0f253e 0%, #060b14 100%); }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-black">
+<body class="bg-[#060b14] text-slate-100 antialiased selection:bg-emerald-500 selection:text-black min-h-screen">
 
-  <!-- টপ নোটিফিকেশন বার -->
-  <div class="bg-gradient-to-r from-emerald-600 to-teal-600 text-white text-center py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide">
-    <i class="fa-solid fa-truck-fast mr-2"></i> আজকের অর্ডারে সারা দেশে ডেলিভারি চার্জ সম্পূর্ণ ফ্রি!
+  <!-- টপ অ্যানাউন্সমেন্ট বার -->
+  <div class="bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 text-white text-center py-2 px-4 text-xs sm:text-sm font-semibold tracking-wide">
+    <i class="fa-solid fa-gift mr-1.5"></i> রকমারি ও দারাজের অফিশিয়াল ডিসকাউন্ট লিংকের মাধ্যমে সংগ্রহ করুন
   </div>
 
-  <!-- হিরো সেকশন -->
-  <section class="max-w-6xl mx-auto px-4 py-8 sm:py-14">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+  <!-- হেডার ও সার্চ সেকশন -->
+  <header class="bg-hub-gradient border-b border-slate-800/80 pt-10 pb-12 px-4 sm:px-6">
+    <div class="max-w-5xl mx-auto text-center space-y-5">
       
-      <!-- প্রোডাক্ট গ্যালারি -->
-      <div class="space-y-4">
-        <div class="relative bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl p-4 flex items-center justify-center">
-          <span class="absolute top-4 left-4 bg-emerald-500 text-slate-950 text-xs font-bold px-3 py-1 rounded-full uppercase">
-            ১০০% অরিজিনাল
-          </span>
-          <img id="mainImage" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=700&q=80" 
-               alt="প্রোডাক্ট প্রিভিউ" class="w-full max-h-[380px] object-contain transition duration-300">
-        </div>
-        <!-- থাম্বনেইল -->
-        <div class="flex gap-3 justify-center">
-          <button onclick="changeImage('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=700&q=80')" 
-                  class="w-16 h-16 sm:w-20 sm:h-20 bg-slate-900 border-2 border-emerald-500 rounded-xl overflow-hidden p-1 focus:outline-none">
-            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=150&q=80" class="w-full h-full object-cover rounded-lg">
-          </button>
-          <button onclick="changeImage('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=700&q=80')" 
-                  class="w-16 h-16 sm:w-20 sm:h-20 bg-slate-900 border border-slate-800 hover:border-emerald-500 rounded-xl overflow-hidden p-1 focus:outline-none">
-            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=150&q=80" class="w-full h-full object-cover rounded-lg">
-          </button>
-          <button onclick="changeImage('https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=700&q=80')" 
-                  class="w-16 h-16 sm:w-20 sm:h-20 bg-slate-900 border border-slate-800 hover:border-emerald-500 rounded-xl overflow-hidden p-1 focus:outline-none">
-            <img src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=150&q=80" class="w-full h-full object-cover rounded-lg">
-          </button>
-        </div>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> ভেরিফাইড ইসলামিক রিসোর্স সেন্টার
       </div>
 
-      <!-- প্রোডাক্ট বিবরণ ও কল-টু-অ্যাকশন -->
-      <div class="space-y-6 text-center lg:text-left">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
-          <i class="fa-solid fa-star text-amber-400"></i> ৪.৯ (৫২০+ ভেরিফাইড রিভিউ)
-        </div>
-        
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-          প্রিমিয়াম ইসলামিক বুক কালেকশন ও হাদিস সমগ্র
-        </h1>
-        
-        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
-          বিশুদ্ধ উৎস ও গ্রহণযোগ্য তাফসীর সংবলিত এই গ্রন্থমালা আপনার আত্মিক উন্নয়ন ও দৈনন্দিন আমলের জন্য একটি অপরিহার্য উপহার।
-        </p>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
+        বাছাইকৃত কিতাব ও লাইফস্টাইল হাব
+      </h1>
 
-        <!-- প্রাইস সেকশন -->
-        <div class="flex items-center justify-center lg:justify-start gap-4">
-          <span class="text-3xl sm:text-4xl font-extrabold text-emerald-400">৳ <span id="displayPrice">১,১৯০</span></span>
-          <span class="text-xl text-slate-500 line-through">৳ ১,৬৫০</span>
-          <span class="bg-red-500/20 border border-red-500/30 text-red-400 text-xs font-bold px-2.5 py-1 rounded-full">
-            ২৮% ছাড়
-          </span>
-        </div>
+      <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+        আমাদের ভিডিও ও পোস্টে উল্লেখিত নির্ভরযোগ্য ইসলামিক বই, তাফসীর ও খাঁটি সুন্নাহ সামগ্রীর তালিকা।
+      </p>
 
-        <!-- অ্যাকশন বাটনসমূহ -->
-        <div class="flex flex-col sm:flex-row gap-4 pt-2">
-          <button onclick="openModal()" class="flex-1 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-lg py-3.5 px-8 rounded-2xl shadow-xl shadow-emerald-500/25 transition duration-200 flex items-center justify-center gap-3">
-            <i class="fa-solid fa-bag-shopping"></i> এখনই অর্ডার করুন
-          </button>
-          <a href="#features" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold py-3.5 px-6 rounded-2xl transition duration-200 flex items-center justify-center gap-2">
-            <i class="fa-solid fa-circle-info"></i> বিস্তারিত দেখুন
-          </a>
-        </div>
+      <!-- লাইভ সার্চ বার -->
+      <div class="max-w-md mx-auto relative pt-2">
+        <i class="fa-solid fa-magnifying-glass absolute left-4 top-5.5 text-slate-500 text-sm"></i>
+        <input type="text" id="searchInput" onkeyup="searchItems()" placeholder="বই বা পণ্যের নাম দিয়ে খুঁজুন..." 
+               class="w-full bg-slate-900/90 border border-slate-700/80 rounded-2xl pl-11 pr-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500 shadow-xl placeholder:text-slate-500">
+      </div>
 
-        <!-- ট্রাস্ট ব্যাজ -->
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t border-slate-900 text-slate-400 text-xs">
-          <div class="flex items-center gap-2 justify-center lg:justify-start">
-            <i class="fa-solid fa-shield-halved text-emerald-400 text-base"></i> ১০০% অরিজিনাল
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 py-10 space-y-12">
+
+    <!-- ================= ১. স্পটলাইট / রিসেন্ট ভিডিও কার্ড ================= -->
+    <section>
+      <div class="bg-gradient-to-r from-slate-900 via-[#0d1c2e] to-slate-900 border border-emerald-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
+        <span class="absolute top-4 right-4 bg-emerald-500 text-slate-950 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider">
+          ভিডিও স্পেশাল
+        </span>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+          <div class="md:col-span-4 flex justify-center">
+            <div class="relative w-40 sm:w-48 h-56 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800">
+              <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&q=80" 
+                   alt="রাহে বেলায়াত" class="w-full h-full object-cover">
+            </div>
           </div>
-          <div class="flex items-center gap-2 justify-center lg:justify-start">
-            <i class="fa-solid fa-truck text-emerald-400 text-base"></i> দ্রুত ক্যাশ ডেলিভারি
-          </div>
-          <div class="flex items-center gap-2 justify-center lg:justify-start">
-            <i class="fa-solid fa-rotate-left text-emerald-400 text-base"></i> ৭ দিনের রিপ্লেসমেন্ট
-          </div>
-          <div class="flex items-center gap-2 justify-center lg:justify-start">
-            <i class="fa-solid fa-headset text-emerald-400 text-base"></i> ২৪/৭ সাপোর্ট
+
+          <div class="md:col-span-8 space-y-4 text-center md:text-left">
+            <div class="flex items-center justify-center md:justify-start gap-2 text-xs text-amber-400">
+              ★★★★★ <span class="text-slate-400 font-semibold">(৪.৯/৫ ভেরিফাইড রেটিং)</span>
+            </div>
+            
+            <h2 class="text-2xl sm:text-3xl font-bold text-white">
+              রাহে বেলায়াত — ড. খোন্দকার আব্দুল্লাহ জাহাঙ্গীর
+            </h2>
+            
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-xl">
+              কুরআন ও সুন্নাহর আলোকে সহীহ দু'আ ও যিকিরের সবচেয়ে বিশুদ্ধ ও তথ্যবহুল কিতাব। কুসংস্কারমুক্ত সহীহ আমলের জন্য প্রতিটি মুসলিম পরিবারের অমূল্য সংগ্রহ।
+            </p>
+
+            <div class="flex items-center justify-center md:justify-start gap-4">
+              <span class="text-2xl font-bold text-emerald-400">৳ ৪৫০</span>
+              <span class="text-sm text-slate-500 line-through">৳ ৬০০</span>
+              <span class="bg-red-500/20 text-red-400 text-xs px-2 py-0.5 rounded font-bold">২৫% ছাড়</span>
+            </div>
+
+            <div class="pt-2">
+              <!-- আপনার রকমারি অ্যাফিলিয়েট লিংক দিন -->
+              <a href="https://www.rokomari.com" target="_blank" 
+                 class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-7 py-3 rounded-xl transition shadow-lg shadow-emerald-500/20 text-sm">
+                <i class="fa-solid fa-cart-shopping"></i> রকমারি থেকে সংগ্রহ করুন &rarr;
+              </a>
+            </div>
           </div>
         </div>
-
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- কাউন্টডাউন টাইমার বার -->
-  <section class="bg-gradient-to-r from-red-950/70 via-slate-900 to-red-950/70 border-y border-red-500/20 py-6 px-4">
-    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-      <div>
-        <h3 class="text-lg font-bold text-white flex items-center justify-center sm:justify-start gap-2">
-          <i class="fa-solid fa-fire text-red-500 animate-bounce"></i> সীমিত সময়ের স্পেশাল অফার!
-        </h3>
-        <p class="text-xs sm:text-sm text-slate-400">অফারটি শেষ হওয়ার আগেই অর্ডার কনফার্ম করুন</p>
-      </div>
-      <!-- টাইমার বক্স -->
-      <div class="flex gap-3 text-center font-mono">
-        <div class="bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 w-16">
-          <span id="hours" class="block text-2xl font-bold text-red-400">০৫</span>
-          <span class="text-[10px] text-slate-500">ঘণ্টা</span>
-        </div>
-        <div class="bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 w-16">
-          <span id="minutes" class="block text-2xl font-bold text-red-400">৩৮</span>
-          <span class="text-[10px] text-slate-500">মিনিট</span>
-        </div>
-        <div class="bg-slate-950 border border-slate-800 rounded-xl px-3 py-2 w-16">
-          <span id="seconds" class="block text-2xl font-bold text-red-400">৪৪</span>
-          <span class="text-[10px] text-slate-500">সেকেন্ড</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ফিচার ও স্পেসিফিকেশন -->
-  <section id="features" class="max-w-6xl mx-auto px-4 py-16 space-y-12">
-    <div class="text-center space-y-3">
-      <h2 class="text-2xl sm:text-3xl font-bold text-white">কেন এই কালেকশনটি সেরা পছন্দ?</h2>
-      <p class="text-sm text-slate-400 max-w-xl mx-auto">সবার পাঠযোগ্য প্রাঞ্জল অনুবাদ ও প্রিমিয়াম বাঁধাই</p>
+    <!-- ================= ২. ক্যাটাগরি ফিল্টার বাটন ================= -->
+    <div class="flex flex-wrap items-center justify-center gap-2.5">
+      <button onclick="filterCat('all')" id="tab-all" class="cat-btn active bg-emerald-500 text-slate-950 font-bold px-5 py-2 rounded-xl text-xs sm:text-sm transition">
+        সব সামগ্রী
+      </button>
+      <button onclick="filterCat('books')" id="tab-books" class="cat-btn bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold px-5 py-2 rounded-xl text-xs sm:text-sm border border-slate-800 transition">
+        📚 ইসলামিক বই
+      </button>
+      <button onclick="filterCat('food')" id="tab-food" class="cat-btn bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold px-5 py-2 rounded-xl text-xs sm:text-sm border border-slate-800 transition">
+        🍯 সুন্নাহ খাদ্য
+      </button>
+      <button onclick="filterCat('lifestyle')" id="tab-lifestyle" class="cat-btn bg-slate-900 hover:bg-slate-800 text-slate-300 font-semibold px-5 py-2 rounded-xl text-xs sm:text-sm border border-slate-800 transition">
+        📿 ইবাদত সামগ্রী
+      </button>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl transition space-y-3">
-        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
-          <i class="fa-solid fa-book-open"></i>
+    <!-- ================= ৩. মাল্টি-প্রোডাক্ট গ্রিড ================= -->
+    <section>
+      <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- কার্ড ১ (বই) -->
+        <div class="product-card bg-slate-900/80 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden transition duration-300 flex flex-col" data-cat="books">
+          <div class="h-52 bg-slate-800 relative overflow-hidden flex items-center justify-center p-4">
+            <span class="absolute top-3 left-3 bg-blue-600/90 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">সিরাত গ্রন্থ</span>
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80" alt="আর-রাহীকুল মাখতূম" class="h-full object-contain">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-amber-400 text-xs">★★★★★ <span class="text-slate-500">(৫.০)</span></div>
+              <h3 class="text-base font-bold text-white mt-1">আর-রাহীকুল মাখতূম</h3>
+              <p class="text-xs text-slate-400 line-clamp-2 mt-1">রাসূলুল্লাহ (সা.)-এর জীবনের সেরা প্রামাণ্য সীরাত গ্রন্থ। নির্ভরযোগ্য ও চমৎকার উপস্থাপন।</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-sm font-bold text-emerald-400">৳ ৫২০</span>
+                <span class="text-xs text-slate-500 line-through ml-1">৳ ৬৫০</span>
+              </div>
+              <a href="https://your-affiliate-link.com" target="_blank" class="bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-emerald-400 font-bold text-xs px-4 py-2 rounded-lg transition">
+                সংগ্রহ লিংক &rarr;
+              </a>
+            </div>
+          </div>
         </div>
-        <h4 class="text-lg font-bold text-white">বিশুদ্ধ তথ্য ও প্রমাণ</h4>
-        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-          প্রতিটি অধ্যায়ে নির্ভরযোগ্য তাহকীক ও নির্ভরযোগ্য সূত্রে হাদিস সংকলন করা হয়েছে।
-        </p>
-      </div>
 
-      <div class="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl transition space-y-3">
-        <div class="w-12 h-12 rounded-xl bg-teal-500/10 text-teal-400 flex items-center justify-center text-xl">
-          <i class="fa-solid fa-feather-pointed"></i>
+        <!-- কার্ড ২ (সুন্নাহ খাদ্য) -->
+        <div class="product-card bg-slate-900/80 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden transition duration-300 flex flex-col" data-cat="food">
+          <div class="h-52 bg-slate-800 relative overflow-hidden flex items-center justify-center p-4">
+            <span class="absolute top-3 left-3 bg-amber-500/90 text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full">প্রাকৃতিক মধু</span>
+            <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&q=80" alt="খাঁটি সুন্দরবনের মধু" class="h-full object-contain">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-amber-400 text-xs">★★★★★ <span class="text-slate-500">(৪.৯)</span></div>
+              <h3 class="text-base font-bold text-white mt-1">সুন্দরবনের খাঁটি খলিসা মধু</h3>
+              <p class="text-xs text-slate-400 line-clamp-2 mt-1">১০০% প্রাকৃতিক ও পিওর কাঁচা মধু। কোনো প্রকার চিনি বা কেমিক্যাল মুক্ত।</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-sm font-bold text-emerald-400">৳ ৮৫০</span>
+                <span class="text-xs text-slate-500 line-through ml-1">৳ ৯৮০</span>
+              </div>
+              <a href="https://your-affiliate-link.com" target="_blank" class="bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-emerald-400 font-bold text-xs px-4 py-2 rounded-lg transition">
+                অর্ডার লিংক &rarr;
+              </a>
+            </div>
+          </div>
         </div>
-        <h4 class="text-lg font-bold text-white">সহজ ও প্রাঞ্জল ভাষা</h4>
-        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-          কঠিন তাত্ত্বিক শব্দের বদলে আধুনিক বাংলা ভাষায় অনুদিত, যা সব বয়সের পাঠকের উপযোগী।
-        </p>
-      </div>
 
-      <div class="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 p-6 rounded-2xl transition space-y-3">
-        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl">
-          <i class="fa-solid fa-gem"></i>
+        <!-- কার্ড ৩ (ইবাদত সামগ্রী) -->
+        <div class="product-card bg-slate-900/80 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden transition duration-300 flex flex-col" data-cat="lifestyle">
+          <div class="h-52 bg-slate-800 relative overflow-hidden flex items-center justify-center p-4">
+            <span class="absolute top-3 left-3 bg-cyan-500/90 text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full">স্মার্ট গেজেট</span>
+            <img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=400&q=80" alt="ডিজিটাল তাসবিহ" class="h-full object-contain">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-amber-400 text-xs">★★★★☆ <span class="text-slate-500">(৪.৮)</span></div>
+              <h3 class="text-base font-bold text-white mt-1">রিচার্জেবল ডিজিটাল স্মার্ট তাসবিহ</h3>
+              <p class="text-xs text-slate-400 line-clamp-2 mt-1">এলইডি ডিসপ্লে ও সাইলেন্ট ক্লিকার বাটন। টাইপ-সি চার্জিং সিস্টেম।</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-sm font-bold text-emerald-400">৳ ৩৫০</span>
+                <span class="text-xs text-slate-500 line-through ml-1">৳ ৫০০</span>
+              </div>
+              <a href="https://your-affiliate-link.com" target="_blank" class="bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-emerald-400 font-bold text-xs px-4 py-2 rounded-lg transition">
+                দারাজ লিংক &rarr;
+              </a>
+            </div>
+          </div>
         </div>
-        <h4 class="text-lg font-bold text-white">রয়্যাল হার্ডকভার বাঁধাই</h4>
-        <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
-          উন্নত মানের পেপার ও টেকসই হার্ডকভার—দীর্ঘদিন যত্নে রাখার জন্য উপযুক্ত কোয়ালিটি।
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <!-- FAQ (একর্ডিয়ন) সেকশন -->
-  <section class="max-w-3xl mx-auto px-4 py-8 space-y-6">
-    <h3 class="text-2xl font-bold text-white text-center">সচরাচর জিজ্ঞাসিত প্রশ্নাবলী (FAQ)</h3>
-
-    <div class="space-y-3">
-      <!-- FAQ ১ -->
-      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
-        <button onclick="toggleFaq(1)" class="w-full p-4 text-left font-semibold text-white flex justify-between items-center">
-          <span>আমি কি পণ্য হাতে পেয়ে দেখে টাকা দিতে পারব?</span>
-          <i id="faq-icon-1" class="fa-solid fa-chevron-down text-emerald-400 transition-transform"></i>
-        </button>
-        <div id="faq-ans-1" class="hidden px-4 pb-4 text-sm text-slate-400 border-t border-slate-800/60 pt-3">
-          হ্যাঁ, অবশ্যই! আমাদের ডেলিভারিম্যানের সামনে প্যাকেজ খুলে দেখে এরপর ক্যাশ অন ডেলিভারিতে সম্পূর্ণ টাকা পরিশোধ করতে পারবেন।
+        <!-- কার্ড ৪ (বই) -->
+        <div class="product-card bg-slate-900/80 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden transition duration-300 flex flex-col" data-cat="books">
+          <div class="h-52 bg-slate-800 relative overflow-hidden flex items-center justify-center p-4">
+            <span class="absolute top-3 left-3 bg-purple-500/90 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">আত্মশুদ্ধি</span>
+            <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&q=80" alt="তওবা ও আত্মশুদ্ধি" class="h-full object-contain">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-amber-400 text-xs">★★★★★ <span class="text-slate-500">(৪.৯)</span></div>
+              <h3 class="text-base font-bold text-white mt-1">আবার তোরা মানুষ হ</h3>
+              <p class="text-xs text-slate-400 line-clamp-2 mt-1">তরুণ সমাজের আত্মশুদ্ধি ও দ্বীনের পথে ফেরার উদ্দীপনামূলক বই।</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-sm font-bold text-emerald-400">৳ ২৯০</span>
+                <span class="text-xs text-slate-500 line-through ml-1">৳ ৩৮০</span>
+              </div>
+              <a href="https://your-affiliate-link.com" target="_blank" class="bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-emerald-400 font-bold text-xs px-4 py-2 rounded-lg transition">
+                সংগ্রহ লিংক &rarr;
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
 
-      <!-- FAQ ২ -->
-      <div class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden">
-        <button onclick="toggleFaq(2)" class="w-full p-4 text-left font-semibold text-white flex justify-between items-center">
-          <span>ডেলিভারি পেতে কতদিন সময় লাগবে?</span>
-          <i id="faq-icon-2" class="fa-solid fa-chevron-down text-emerald-400 transition-transform"></i>
-        </button>
-        <div id="faq-ans-2" class="hidden px-4 pb-4 text-sm text-slate-400 border-t border-slate-800/60 pt-3">
-          ঢাকা সিটির ভেতরে ২৪ থেকে ৪৮ ঘণ্টার মধ্যে এবং ঢাকার বাইরে সারা দেশে ২ থেকে ৩ কার্যদিবসের মধ্যে ডেলিভারি সম্পন্ন হয়।
+        <!-- কার্ড ৫ (সুন্নাহ খাদ্য) -->
+        <div class="product-card bg-slate-900/80 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden transition duration-300 flex flex-col" data-cat="food">
+          <div class="h-52 bg-slate-800 relative overflow-hidden flex items-center justify-center p-4">
+            <span class="absolute top-3 left-3 bg-amber-500/90 text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full">মদিনার খেজুর</span>
+            <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&q=80" alt="আজওয়া খেজুর" class="h-full object-contain">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-amber-400 text-xs">★★★★★ <span class="text-slate-500">(৫.০)</span></div>
+              <h3 class="text-base font-bold text-white mt-1">মদিনার প্রিমিয়াম আজওয়া খেজুর</h3>
+              <p class="text-xs text-slate-400 line-clamp-2 mt-1">সৌদি আরবের মদিনা থেকে সরাসরি সংগৃহীত খাঁটি আজওয়া খেজুর (১ কেজি)।</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-sm font-bold text-emerald-400">৳ ১,২০০</span>
+                <span class="text-xs text-slate-500 line-through ml-1">৳ ১,৪৫০</span>
+              </div>
+              <a href="https://your-affiliate-link.com" target="_blank" class="bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-emerald-400 font-bold text-xs px-4 py-2 rounded-lg transition">
+                অর্ডার লিংক &rarr;
+              </a>
+            </div>
+          </div>
         </div>
+
+        <!-- কার্ড ৬ (ইবাদত সামগ্রী) -->
+        <div class="product-card bg-slate-900/80 border border-slate-800 hover:border-slate-700 rounded-2xl overflow-hidden transition duration-300 flex flex-col" data-cat="lifestyle">
+          <div class="h-52 bg-slate-800 relative overflow-hidden flex items-center justify-center p-4">
+            <span class="absolute top-3 left-3 bg-teal-500/90 text-black text-[10px] font-bold px-2.5 py-0.5 rounded-full">প্রিমিয়াম গিফট</span>
+            <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&q=80" alt="অ্যারাবিয়ান আতর" class="h-full object-contain">
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <div class="text-amber-400 text-xs">★★★★★ <span class="text-slate-500">(৪.৯)</span></div>
+              <h3 class="text-base font-bold text-white mt-1">রয়্যাল ওউদ আতর (৬ মিলি)</h3>
+              <p class="text-xs text-slate-400 line-clamp-2 mt-1">অ্যালকোহলমুক্ত দীর্ঘস্থায়ী মিষ্টি ও প্রিমিয়াম অ্যারাবিয়ান সুবাস।</p>
+            </div>
+            <div class="pt-2 border-t border-slate-800/80 flex items-center justify-between">
+              <div>
+                <span class="text-sm font-bold text-emerald-400">৳ ৪৫০</span>
+                <span class="text-xs text-slate-500 line-through ml-1">৳ ৬০০</span>
+              </div>
+              <a href="https://your-affiliate-link.com" target="_blank" class="bg-slate-800 hover:bg-emerald-500 hover:text-slate-950 text-emerald-400 font-bold text-xs px-4 py-2 rounded-lg transition">
+                সংগ্রহ লিংক &rarr;
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ফুটার -->
-  <footer class="text-center py-10 border-t border-slate-900 text-xs text-slate-500 space-y-2 mb-16 sm:mb-0">
-    <p>&copy; ২০২৬ আপনার শপ/ব্র্যান্ড নেম • সর্বস্বত্ব সংরক্ষিত</p>
-  </footer>
-
-  <!-- মোবাইলের জন্য স্টিকি অর্ডার বাটন -->
-  <div class="fixed bottom-0 left-0 right-0 bg-slate-900/95 backdrop-blur-md border-t border-slate-800 p-3 sm:hidden z-40 flex items-center justify-between gap-3 shadow-2xl">
-    <div>
-      <span class="text-xs text-slate-400 block">মোট মূল্য:</span>
-      <span class="text-lg font-bold text-emerald-400">৳ ১,১৯০</span>
-    </div>
-    <button onclick="openModal()" class="bg-emerald-500 text-slate-950 font-bold px-6 py-2.5 rounded-xl shadow-lg flex items-center gap-2 text-sm">
-      <i class="fa-solid fa-cart-shopping"></i> অর্ডার করুন
-    </button>
-  </div>
+  </main>
 
   <!-- ফ্লোটিং হোয়াটসঅ্যাপ বাটন -->
   <a href="https://wa.me/8801700000000" target="_blank" 
-     class="fixed bottom-20 sm:bottom-6 right-5 w-12 h-12 sm:w-14 sm:h-14 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-full flex items-center justify-center text-2xl shadow-xl z-40 transition-transform hover:scale-110">
-    <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
+     class="fixed bottom-6 right-6 w-13 h-13 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-full flex items-center justify-center text-2xl shadow-2xl z-40 transition-transform hover:scale-110">
+    <i class="fa-brands fa-whatsapp text-2xl text-slate-950"></i>
   </a>
 
-  <!-- ==================== পপআপ অর্ডার মোডাল ==================== -->
-  <div id="orderModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 relative shadow-2xl space-y-5 my-8">
-      
-      <!-- ক্লোজ বাটন -->
-      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-xl">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
+  <!-- ফুটার ও ডিসক্লেইমার -->
+  <footer class="text-center py-12 border-t border-slate-900 text-xs text-slate-500 space-y-3 px-4">
+    <p class="max-w-xl mx-auto leading-relaxed">
+      <strong>স্বচ্ছতা বিজ্ঞপ্তি:</strong> এই ওয়েবসাইটে উল্লেখিত লিংকগুলো অ্যাফিলিয়েট লিংক। লিংক থেকে কোনো পণ্য ক্রয় করলে মূল দাম অপরিবর্তিত রেখে আমরা একটি সামান্য রেফারেল কমিশন পেয়ে থাকি।
+    </p>
+    <p>&copy; ২০২৬ আপনার পেজের নাম • সর্বস্বত্ব সংরক্ষিত</p>
+  </footer>
 
-      <div class="border-b border-slate-800 pb-3">
-        <h3 class="text-xl font-bold text-white flex items-center gap-2">
-          <i class="fa-solid fa-cart-check text-emerald-400"></i> আপনার অর্ডারটি সম্পন্ন করুন
-        </h3>
-        <p class="text-xs text-slate-400 mt-1">সঠিক তথ্য দিয়ে নিচের ফর্মটি পূরণ করুন</p>
-      </div>
-
-      <!-- পরিমাণ ও মোট মূল্য হিসাব -->
-      <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800/80 flex items-center justify-between">
-        <div>
-          <span class="text-xs text-slate-400 block">পণ্যের পরিমাণ:</span>
-          <div class="flex items-center gap-3 mt-1">
-            <button onclick="updateQty(-1)" class="w-7 h-7 bg-slate-800 hover:bg-slate-700 text-white rounded-lg flex items-center justify-center font-bold">-</button>
-            <span id="qtyVal" class="font-bold text-white text-base">১</span>
-            <button onclick="updateQty(1)" class="w-7 h-7 bg-slate-800 hover:bg-slate-700 text-white rounded-lg flex items-center justify-center font-bold">+</button>
-          </div>
-        </div>
-        <div class="text-right">
-          <span class="text-xs text-slate-400 block">মোট প্রদেয় বিল:</span>
-          <span id="totalBill" class="text-xl font-extrabold text-emerald-400">৳ ১,১৯০</span>
-        </div>
-      </div>
-
-      <!-- কাস্টমার ফর্ম -->
-      <form onsubmit="handleOrder(event)" class="space-y-3 text-left">
-        <div>
-          <label class="text-xs font-semibold text-slate-300 block mb-1">আপনার পূর্ণ নাম *</label>
-          <input type="text" required placeholder="উদা: আব্দুল্লাহ আল মামুন" 
-                 class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500">
-        </div>
-
-        <div>
-          <label class="text-xs font-semibold text-slate-300 block mb-1">মোবাইল নম্বর *</label>
-          <input type="tel" required placeholder="উদা: 017XXXXXXXX" 
-                 class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-emerald-500">
-        </div>
-
-        <div>
-          <label class="text-xs font-semibold text-slate-300 block mb-1">সম্পূর্ণ ঠিকানা (বাসা/রোড, থানা, জেলা) *</label>
-          <textarea rows="2" required placeholder="উদা: বাড়ি ১২, রোড ৪, সেক্টর ৭, উত্তরা, ঢাকা" 
-                    class="w-full bg-slate-950 border border-slate-800 rounded-xl px-3.5 py-2 text-sm text-white focus:outline-none focus:border-emerald-500"></textarea>
-        </div>
-
-        <!-- পেমেন্ট অপশন -->
-        <div>
-          <label class="text-xs font-semibold text-slate-300 block mb-1.5">পেমেন্ট মেথড বেছে নিন:</label>
-          <div class="grid grid-cols-3 gap-2">
-            <button type="button" onclick="setPayment('cod')" id="btn-cod" 
-                    class="border border-emerald-500 bg-emerald-500/10 text-emerald-400 py-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5">
-              <i class="fa-solid fa-hand-holding-dollar"></i> ক্যাশ অন ডেলিভারি
-            </button>
-            <button type="button" onclick="setPayment('bkash')" id="btn-bkash" 
-                    class="border border-slate-800 hover:border-slate-700 bg-slate-950 text-slate-300 py-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5">
-              <i class="fa-solid fa-mobile-screen"></i> বিকাশ
-            </button>
-            <button type="button" onclick="setPayment('nagad')" id="btn-nagad" 
-                    class="border border-slate-800 hover:border-slate-700 bg-slate-950 text-slate-300 py-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5">
-              <i class="fa-solid fa-wallet"></i> নগদ
-            </button>
-          </div>
-        </div>
-
-        <!-- বিকাশ / নগদ ট্রানজ্যাকশন আইডি ফিল্ড (প্রয়োজনে শো হবে) -->
-        <div id="mobilePayBox" class="hidden bg-slate-950 border border-slate-800 p-3 rounded-xl space-y-2">
-          <div class="flex items-center justify-between text-xs text-slate-300">
-            <span>সেন্ড মানি নম্বর: <strong id="payNumber" class="text-emerald-400 font-mono">01700000000</strong></span>
-            <button type="button" onclick="copyNumber()" class="text-xs bg-slate-800 px-2 py-0.5 rounded text-emerald-300 hover:bg-slate-700">কপি করুন</button>
-          </div>
-          <input type="text" id="trxId" placeholder="পেমেন্ট শেষে TrxID এখানে লিখুন" 
-                 class="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:border-emerald-500">
-        </div>
-
-        <!-- সাবমিট বাটন -->
-        <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-3 rounded-xl transition duration-200 mt-2 flex items-center justify-center gap-2 text-base">
-          <i class="fa-solid fa-paper-plane"></i> অর্ডার নিশ্চিত করুন
-        </button>
-      </form>
-
-    </div>
-  </div>
-
-  <!-- স্ক্রিপ্ট লজিক -->
+  <!-- জাভাস্ক্রিপ্ট লজিক -->
   <script>
-    // ইমেজ পরিবর্তনের ফাংশন
-    function changeImage(src) {
-      document.getElementById('mainImage').src = src;
-    }
-
-    // FAQ টগল
-    function toggleFaq(id) {
-      const ans = document.getElementById(`faq-ans-${id}`);
-      const icon = document.getElementById(`faq-icon-${id}`);
-      ans.classList.toggle('hidden');
-      icon.classList.toggle('rotate-180');
-    }
-
-    // কাউন্টডাউন টাইমার
-    let time = 5 * 3600 + 38 * 60 + 44;
-    setInterval(() => {
-      if (time > 0) time--;
-      const h = Math.floor(time / 3600);
-      const m = Math.floor((time % 3600) / 60);
-      const s = time % 60;
-      document.getElementById('hours').innerText = h < 10 ? '০' + h : h;
-      document.getElementById('minutes').innerText = m < 10 ? '০' + m : m;
-      document.getElementById('seconds').innerText = s < 10 ? '০' + s : s;
-    }, 1000);
-
-    // মোডাল হ্যান্ডলিং
-    const modal = document.getElementById('orderModal');
-    function openModal() { modal.classList.remove('hidden'); }
-    function closeModal() { modal.classList.add('hidden'); }
-
-    // পরিমাণ ও লাইভ দাম গণনা
-    const unitPrice = 1190;
-    let qty = 1;
-    function updateQty(delta) {
-      qty = Math.max(1, qty + delta);
-      document.getElementById('qtyVal').innerText = qty;
-      const total = qty * unitPrice;
-      document.getElementById('totalBill').innerText = `৳ ${total.toLocaleString('bn-BD')}`;
-    }
-
-    // পেমেন্ট মেথড সিলেকশন
-    let activePayment = 'cod';
-    function setPayment(type) {
-      activePayment = type;
-      ['cod', 'bkash', 'nagad'].forEach(p => {
-        const btn = document.getElementById(`btn-${p}`);
-        btn.className = (p === type) 
-          ? 'border border-emerald-500 bg-emerald-500/10 text-emerald-400 py-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5'
-          : 'border border-slate-800 bg-slate-950 text-slate-300 py-2 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5';
+    // ক্যাটাগরি ফিল্টারিং
+    function filterCat(category) {
+      document.querySelectorAll('.cat-btn').forEach(btn => {
+        btn.classList.remove('bg-emerald-500', 'text-slate-950', 'font-bold');
+        btn.classList.add('bg-slate-900', 'text-slate-300', 'font-semibold');
       });
+      const activeBtn = document.getElementById(`tab-${category}`);
+      activeBtn.classList.remove('bg-slate-900', 'text-slate-300', 'font-semibold');
+      activeBtn.classList.add('bg-emerald-500', 'text-slate-950', 'font-bold');
 
-      const payBox = document.getElementById('mobilePayBox');
-      if (type === 'cod') {
-        payBox.classList.add('hidden');
-      } else {
-        payBox.classList.remove('hidden');
-        document.getElementById('payNumber').innerText = (type === 'bkash') ? '017XXXXXXXX (বিকাশ)' : '019XXXXXXXX (নগদ)';
-      }
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-cat') === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
     }
 
-    // নম্বর কপি ফাংশন
-    function copyNumber() {
-      const num = document.getElementById('payNumber').innerText.split(' ')[0];
-      navigator.clipboard.writeText(num);
-      alert('নম্বর কপি করা হয়েছে!');
-    }
-
-    // অর্ডার সাবমিট কনফার্মেশন
-    function handleOrder(e) {
-      e.preventDefault();
-      alert('আলহামদুলিল্লাহ! আপনার অর্ডারটি সফলভাবে গ্রহণ করা হয়েছে। খুব শীঘ্রই আমাদের প্রতিনিধি আপনাকে কল করবেন।');
-      closeModal();
+    // লাইভ সার্চ
+    function searchItems() {
+      const input = document.getElementById('searchInput').value.toLowerCase();
+      const cards = document.querySelectorAll('.product-card');
+      cards.forEach(card => {
+        const title = card.querySelector('h3').innerText.toLowerCase();
+        const desc = card.querySelector('p').innerText.toLowerCase();
+        if (title.includes(input) || desc.includes(input)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
     }
   </script>
 
