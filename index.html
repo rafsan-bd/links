@@ -373,7 +373,6 @@ function fetchSheetData() {
         pros: row.pros ? row.pros.split(',').map(s => s.trim()) : [],
         cons: row.cons ? row.cons.split(',').map(s => s.trim()) : [],
         url: row.url || "#",
-        btn: row.btn || "সংগ্রহ করুন"
       }));
 
       cats = [ALL, ...new Set(PRODUCTS.map(p => p.cat).filter(Boolean))];
