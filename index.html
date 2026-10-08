@@ -6,11 +6,10 @@
 <title>বাছাই খাতা – ইসলামিক পণ্য, হোস্টিং, AI ও গ্যাজেটের সৎ বাছাই</title>
 <meta name="description" content="ইসলামিক বই, সুন্নাহ খাদ্য, ক্লাউড হোস্টিং ও প্রিমিয়াম গ্যাজেটের বিশ্বস্ত রিভিউ ও সততাপূর্ণ সুপারিশ হাব।">
 
-<!-- সোশ্যাল ও ওপেন গ্রাফ মেটা ট্যাগ -->
-<meta property="og:title" content="বাছাই খাতা – সৎ বাছাই, সঠিক সিদ্ধান্ত">
-<meta property="og:description" content="যা নিজে বুঝে-শুনে বাছাই করি, কেবল তাই সুপারিশ করি। যাচাইকৃত ইসলামিক সামগ্রী ও ডিজিটাল সার্ভিস।">
-<meta property="og:type" content="website">
+<!-- Brevo CSS -->
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
+<!-- ফন্ট ও আইকন -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -75,10 +74,8 @@ h1,h2,h3,h4{font-family:"Anek Bangla","Hind Siliguri",sans-serif;line-height:1.3
 a{color:inherit;text-decoration:none}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 
-/* ডিসক্লেইমার বার */
 .disc{background:var(--ink);color:var(--bg);font-size:13px;padding:8px 12px;text-align:center;font-weight:500}
 
-/* হেডার */
 header.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--line)}
 .logo{display:inline-flex;align-items:center;gap:12px;color:var(--ink)}
 .logo svg{width:42px;height:42px;flex:none}
@@ -90,26 +87,21 @@ nav a:hover{color:var(--ink)}
 .tg{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:var(--card);cursor:pointer;font-size:17px;display:grid;place-items:center;transition:.2s}
 .tg:hover{border-color:var(--acc)}
 
-/* হিরো */
 .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center;padding:44px 0 52px}
 .hero h1{font-size:clamp(32px,5.5vw,52px);font-weight:800;line-height:1.3}
 .hero p{color:var(--mute);max-width:48ch;font-size:18px;margin:16px 0 24px}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--acc);color:var(--accink);padding:10px 22px;border-radius:12px;font-weight:700;border:0;cursor:pointer;font-size:16px;font-family:inherit;transition:.2s}
 .btn:hover{background:var(--acc-hover);filter:brightness(1.05)}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
-.btn.ghost:hover{border-color:var(--ink)}
 .btn-sm{padding:7px 14px;font-size:14px;border-radius:9px}
 
-/* এডিটর'স চয়েস কার্ড */
 .feat{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 25px rgba(0,0,0,0.04);position:relative}
 .feat-tag{position:absolute;top:16px;right:16px;background:var(--acc);color:var(--accink);font-size:11px;font-weight:800;padding:4px 10px;border-radius:99px;text-transform:uppercase}
 .feat .img-box{height:160px;background:var(--tile);border-radius:14px;display:grid;place-items:center;overflow:hidden;margin-bottom:16px}
 .feat .img-box img{width:100%;height:100%;object-fit:cover}
-.feat .img-box .fallback-ic{font-size:60px}
 .feat h3{font-size:23px;margin-bottom:4px}
 .feat small{color:var(--mute);font-weight:500}
 
-/* ফিল্টার ও সার্চ কন্ট্রোল */
 .controls{display:flex;flex-direction:column;gap:18px;margin-bottom:28px}
 .search-bar{position:relative;width:100%;max-width:480px}
 .search-bar input{width:100%;padding:12px 42px 12px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);font:inherit;outline:none;transition:.2s}
@@ -119,7 +111,6 @@ nav a:hover{color:var(--ink)}
 .tab{background:var(--card);border:1.5px solid var(--line);color:var(--ink);padding:6px 18px;border-radius:99px;cursor:pointer;font:600 15px "Hind Siliguri",sans-serif;transition:.2s}
 .tab[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
-/* প্রোডাক্ট গ্রিড ও কার্ড */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:22px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:12px;transition:transform .2s, border-color .2s;position:relative}
 .card:hover{transform:translateY(-3px);border-color:var(--mute)}
@@ -149,24 +140,29 @@ nav a:hover{color:var(--ink)}
 .btn-copy{background:var(--badge-bg);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:0 14px;cursor:pointer;font-size:15px;transition:.2s}
 .btn-copy:hover{border-color:var(--ink)}
 
-/* খালি স্টেট */
 #emptyState{display:none;text-align:center;padding:50px 20px;grid-column:1/-1}
 #emptyState i{font-size:48px;color:var(--mute);margin-bottom:14px}
 
-/* মেথড ও নিউজলেটার */
 .how{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
 .how div{border-top:3px solid var(--acc);padding-top:16px}
 .how h3{font-size:19px;margin-bottom:6px}
 .how p{margin:0;color:var(--mute);font-size:15px}
 
-.news{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+/* Brevo ইন্টিগ্রেটেড নিউজলেটার বক্স */
+.news{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px;display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center}
 .news h2{font-size:28px}
 .news p{color:var(--mute);margin:8px 0 0;font-size:16px}
-form.f{display:flex;gap:10px;flex-wrap:wrap}
-input[type=email]{flex:1 1 210px;padding:12px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
-#msg{width:100%;margin:8px 0 0;font-size:14px;min-height:22px;font-weight:600}
 
-/* ফ্লোটিং হোয়াটসঅ্যাপ */
+/* Brevo মেসেজ প্যানেল ওভাররাইড */
+:where(.sib-form-message-panel){display:none;padding:12px;margin-bottom:12px;border-radius:10px;font-size:14px}
+#error-message{background:#ffeded;color:#661d1d;border:1px solid #ff4949}
+#success-message{background:#e7faf0;color:#085229;border:1px solid #13ce66}
+
+.brevo-form-row{display:flex;gap:10px;flex-wrap:wrap;align-items:stretch}
+.brevo-input{flex:1 1 200px;padding:12px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;outline:none;transition:.2s}
+.brevo-input:focus{border-color:var(--acc)}
+.input--hidden{display:none !important}
+
 .wa-float{position:fixed;bottom:24px;right:24px;width:52px;height:52px;background:#25d366;color:#fff;border-radius:50%;display:grid;place-items:center;font-size:28px;box-shadow:0 8px 20px rgba(37,211,102,0.35);z-index:99;transition:.2s}
 .wa-float:hover{transform:scale(1.08)}
 
@@ -194,7 +190,7 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
   <nav aria-label="প্রধান মেনু">
     <a href="#picks">সেরা বাছাই</a>
     <a href="#method">বাছাই নীতি</a>
-    <a href="#join">নিউজলেটার</a>
+    <a href="#join">আপডেট পেতে</a>
     <button class="tg" id="tg" type="button" aria-label="থিম পরিবর্তন"></button>
   </nav>
 </header>
@@ -207,11 +203,9 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
     <a class="btn ghost" href="#method">কীভাবে বাছাই করি</a>
   </div>
   
-  <!-- এডিটর্স চয়েস কার্ড -->
   <div class="feat">
     <span class="feat-tag">সম্পাদকীয় পছন্দ</span>
     <div class="img-box">
-      <!-- ছবির লিংক থাকলে এখানে বসবে -->
       <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&q=80" alt="রাহে বেলায়াত" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
       <div class="fallback-ic" style="display:none">📖</div>
     </div>
@@ -235,21 +229,17 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
     <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px">
       <h2 style="font-size:clamp(26px,4vw,36px);font-weight:700">আমাদের বর্তমান সেরা বাছাই</h2>
       
-      <!-- লাইভ সার্চ বার -->
       <div class="search-bar">
         <input type="text" id="searchInput" placeholder="বই, গ্যাজেট বা হোস্টিং খুঁজুন..." aria-label="পণ্য খুঁজুন">
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
     </div>
 
-    <!-- ক্যাটাগরি বাটন -->
     <div class="tabs" role="group" aria-label="ক্যাটাগরি ফিল্টার" id="tabs"></div>
   </div>
 
-  <!-- গ্রিড -->
   <div class="grid" id="grid"></div>
 
-  <!-- কোনো রেজাল্ট না পেলে খালি স্টেট -->
   <div id="emptyState">
     <i class="fa-regular fa-folder-open"></i>
     <h3 style="color:var(--ink)">দুঃখিত, কোনো পণ্য খুঁজে পাওয়া যায়নি!</h3>
@@ -276,18 +266,45 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
   </div>
 </section>
 
-<!-- ================= নিউজলেটার ================= -->
+<!-- ================= Brevo ইন্টিগ্রেটেড নিউজলেটার সেকশন ================= -->
 <section id="join" style="padding-bottom:30px">
   <div class="news">
     <div>
       <h2>সেরা ডিলগুলো ইনবক্সে পেতে চান?</h2>
       <p>সপ্তাহে কেবল একটি দরকারী ইমেইল। নতুন যাচাইকৃত বই, কাজের টুল ও স্পেশাল ছাড়ের আপডেট।</p>
     </div>
-    <form class="f" id="nf" novalidate>
-      <input type="email" id="em" placeholder="yourname@gmail.com" aria-label="ইমেইল ঠিকানা" required>
-      <button class="btn" type="submit">যুক্ত হোন</button>
-      <p id="msg" role="status"></p>
-    </form>
+
+    <div id="sib-form-container">
+      <!-- এরর মেসেজ প্যানেল -->
+      <div id="error-message" class="sib-form-message-panel">
+        <span class="sib-form-message-panel__inner-text">
+          <i class="fa-solid fa-triangle-exclamation mr-1"></i> সাবস্ক্রিপশন ব্যর্থ হয়েছে। অনুগ্রহ করে সঠিক ইমেইল দিয়ে আবার চেষ্টা করুন।
+        </span>
+      </div>
+
+      <!-- সাকসেস মেসেজ প্যানেল -->
+      <div id="success-message" class="sib-form-message-panel">
+        <span class="sib-form-message-panel__inner-text">
+          <i class="fa-solid fa-circle-check mr-1"></i> আলহামদুলিল্লাহ! আপনার সাবস্ক্রিপশন সফল হয়েছে।
+        </span>
+      </div>
+
+      <!-- Brevo ফর্ম -->
+      <form id="sib-form" method="POST" action="https://f4ff26c9.sibforms.com/serve/MUIFAE-fhyBCmuOFvBRkXU6WrE6ASEyWZx6z2KyA-frJUJHqNd8VM9VuPgQd8OFFhgDc9KUTE7VvOWd5laNUQf4WvSzbDf82HW4-WTWPkNlJ1tg1fpTXRzuLwpHTdrx0QjYmLfGk-mL57Bpc_CqK1M5V33TfBvRQ_AADaiBJ9V196jUY9gL84tkYDixB7ciMCNX0AWSKR79_E2qTag==" data-type="subscription">
+        
+        <div class="brevo-form-row">
+          <input class="brevo-input" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="yourname@gmail.com" required>
+          <button class="btn" form="sib-form" type="submit">
+            যুক্ত হোন
+          </button>
+        </div>
+
+        <!-- স্প্যাম ও বট ফিল্টার (গোপন ইনপুট) -->
+        <div class="g-recaptcha-v3" data-sitekey="6LeEiOQtAAAAAHKmYsTCLDVlj8ge0T4Q6j41t1Hd" style="display: none"></div>
+        <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="hidden" name="locale" value="en">
+      </form>
+    </div>
   </div>
 </section>
 
@@ -299,14 +316,32 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
 </div>
 
 <!-- ফ্লোটিং হোয়াটসঅ্যাপ বাটন -->
-<a href="https://wa.me/8801410133963" class="wa-float" target="_blank" rel="noopener" aria-label="হোয়াটসঅ্যাপে প্রশ্ন করুন">
+<a href="https://wa.me/8801700000000" class="wa-float" target="_blank" rel="noopener" aria-label="হোয়াটসঅ্যাপে প্রশ্ন করুন">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
+<!-- ================= Brevo স্ক্রিপ্ট ================= -->
 <script>
-// =========================================================================
-// ডাটাবেজ: প্রতিটি পণ্যের তথ্য, ছবি, স্টোর ও অ্যাফিলিয়েট লিঙ্ক এখানে দিন
-// =========================================================================
+  window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
+  window.LOCALE = 'en';
+  window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "সঠিক ইমেইল ফরম্যাট দিন";
+  window.REQUIRED_ERROR_MESSAGE = "ইমেইল খালি রাখা যাবে না";
+  window.GENERIC_INVALID_MESSAGE = "তথ্যটি সঠিক নয়, পুনরায় চেষ্টা করুন";
+  window.translation = {
+    common: {
+      selectedList: '{quantity} list selected',
+      selectedLists: '{quantity} lists selected',
+      selectedOption: '{quantity} selected',
+      selectedOptions: '{quantity} selected',
+    }
+  };
+  var AUTOHIDE = Boolean(0);
+</script>
+<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeEiOQtAAAAAHKmYsTCLDVlj8ge0T4Q6j41t1Hd&hl=en" async defer></script>
+
+<!-- ================= সাইট লজিক স্ক্রিপ্ট ================= -->
+<script>
 const PRODUCTS = [
   {
     id: "hostinger",
@@ -339,7 +374,7 @@ const PRODUCTS = [
     blurb: "মুফতী তাকী উসমানী (দা.বা.)-এর রচিত সহজ-সরল ও আধুনিক সমসাময়িক প্রাঞ্জল তাফসীর সংকলন।",
     pros: ["সহজ ও সাবলীল অনুবাদ", "উন্নত মানের বাঁধাই ও কাগজ"],
     cons: ["৩টি খণ্ড মিলিয়ে সাইজে বেশ ভারী"],
-    url: "https://rokomari.com?YOUR_AFF_LINK",
+    url: "https://rokomari.com",
     btn: "রকমারি লিংক"
   },
   {
@@ -356,7 +391,7 @@ const PRODUCTS = [
     blurb: "রাবেতা আল-আলম আল-ইসলামী কর্তৃক প্রথম পুরস্কারপ্রাপ্ত রাসুল (সা.)-এর প্রামাণ্য জীবনী গ্রন্থ।",
     pros: ["সম্পূর্ণ প্রামাণ্য ও নির্ভরযোগ্য", "ইতিহাসের এক চমৎকার সংকলন"],
     cons: ["তাত্ত্বিক আলোচনা থাকায় ধীরেসুস্থে পড়তে হয়"],
-    url: "https://rokomari.com?YOUR_AFF_LINK",
+    url: "https://rokomari.com",
     btn: "সংগ্রহ করুন"
   },
   {
@@ -373,7 +408,7 @@ const PRODUCTS = [
     blurb: "কোনো প্রকার প্রসেসিং বা চিনিমুক্ত ১০০% প্রাকৃতিক সুন্দরবনের কাঁচা খলিসা ফুলের মধু।",
     pros: ["ন্যাচারাল ফ্রুট ফ্লেভার ও ঘ্রাণ", "ল্যাবে টেস্ট করা খাঁটি মধু"],
     cons: ["মৌসুম ছাড়া স্টক দ্রুত শেষ হয়"],
-    url: "https://wafilife.com?YOUR_AFF_LINK",
+    url: "https://wafilife.com",
     btn: "অর্ডার লিংক"
   },
   {
@@ -390,7 +425,7 @@ const PRODUCTS = [
     blurb: "মদিনা থেকে সরাসরি সংগৃহীত নরম ও সুস্বাদু ১ কেজি সাইজের সিলপ্যাক আজওয়া খেজুর।",
     pros: ["হাদিস বর্ণিত ফজিলতপূর্ণ খাবার", "ফ্রেশ ও রসাল টেক্সচার"],
     cons: ["বাজারে সাধারণ খেজুরের চেয়ে দাম বেশি"],
-    url: "https://daraz.com.bd?YOUR_AFF_LINK",
+    url: "https://daraz.com.bd",
     btn: "দারাজে দেখুন"
   },
   {
@@ -407,7 +442,7 @@ const PRODUCTS = [
     blurb: "আঙুলে পরার উপযোগী নরম সিলিকন স্ট্র্যাপ ও এলইডি ডিসপ্লেযুক্ত ফিঙ্গার কাউন্টার।",
     pros: ["নিঃশব্দে ক্লিকিং", "টাইপ-সি পোর্টে দ্রুত চার্জ"],
     cons: ["প্লাস্টিক বডি বেশি শক্ত নয়"],
-    url: "https://daraz.com.bd?YOUR_AFF_LINK",
+    url: "https://daraz.com.bd",
     btn: "দাম দেখুন"
   },
   {
@@ -424,7 +459,7 @@ const PRODUCTS = [
     blurb: "হাঁটু ও পায়ের জয়েন্টে ব্যথা উপশমে বিশেষভাবে তৈরি আরামদায়ক নরম ফোমের জায়নামাজ।",
     pros: ["বয়স্কদের দীর্ঘ নামাজের জন্য চমৎকার", "অ্যান্টি-স্লিপ গ্রিপ"],
     cons: ["ভ্রমণে সহজে পকেটে নেওয়া যায় না"],
-    url: "https://daraz.com.bd?YOUR_AFF_LINK",
+    url: "https://daraz.com.bd",
     btn: "দাম দেখুন"
   },
   {
@@ -441,7 +476,7 @@ const PRODUCTS = [
     blurb: "একটি ছোট অ্যাডাপ্টার দিয়েই ল্যাপটপ, ফোন ও পাওয়ার ব্যাংক একসাথে দ্রুত চার্জ করা যায়।",
     pros: ["কমপ্যাক্ট ট্রাভেল সাইজ", "৩টি মাল্টিপল পোর্ট"],
     cons: ["একটু হালকা গরম হয়"],
-    url: "https://daraz.com.bd?YOUR_AFF_LINK",
+    url: "https://daraz.com.bd",
     btn: "দাম দেখুন"
   }
 ];
@@ -459,14 +494,11 @@ let searchQuery = "";
 const bn = n => n.toLocaleString("bn-BD", {minimumFractionDigits: 1});
 function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 
-// কার্ড ও ক্যাটাগরি রেন্ডার ফাংশন
 function render(){
-  // ট্যাব আপডেট
   tabs.innerHTML = cats.map(c => 
     `<button class="tab" aria-pressed="${c === activeCat}" data-c="${esc(c)}">${esc(c)}</button>`
   ).join("");
 
-  // ফিল্টারিং
   const filtered = PRODUCTS.filter(p => {
     const matchCat = (activeCat === ALL || p.cat === activeCat);
     const q = searchQuery.toLowerCase().trim();
@@ -474,7 +506,6 @@ function render(){
     return matchCat && matchSearch;
   });
 
-  // খালি স্টেট চেক
   if(filtered.length === 0){
     grid.innerHTML = "";
     emptyState.style.display = "block";
@@ -482,7 +513,6 @@ function render(){
   }
   emptyState.style.display = "none";
 
-  // কার্ড আউটপুট
   grid.innerHTML = filtered.map(p => `
   <article class="card">
     <div class="card-top">
@@ -528,7 +558,6 @@ function render(){
   </article>`).join("");
 }
 
-// ক্যাটাগরি ক্লিক ইভেন্ট
 tabs.addEventListener("click", e => {
   const b = e.target.closest(".tab");
   if(b){
@@ -537,38 +566,17 @@ tabs.addEventListener("click", e => {
   }
 });
 
-// লাইভ সার্চ ইভেন্ট
 searchInput.addEventListener("input", e => {
   searchQuery = e.target.value;
   render();
 });
 
-// লিংক কপি ফাংশন
 function copyLink(url){
-  if(url === "#" || !url){
-    alert("আপনার আসল অ্যাফিলিয়েট লিংকটি কোডে বসিয়ে নিন!");
-    return;
-  }
   navigator.clipboard.writeText(url).then(() => {
-    alert("অ্যাফিলিয়েট লিংক কপি হয়েছে!");
+    alert("লিংক কপি হয়েছে!");
   });
 }
 
-// নিউজলেটার ফর্ম
-document.getElementById("nf").addEventListener("submit", e => {
-  e.preventDefault();
-  const v = document.getElementById("em").value.trim(), m = document.getElementById("msg");
-  if(!/^\S+@\S+\.\S+$/.test(v)){
-    m.style.color = "var(--bad)";
-    m.textContent = "সঠিক ইমেইল ঠিকানা লিখুন।";
-    return;
-  }
-  m.style.color = "var(--good)";
-  m.textContent = "ধন্যবাদ! সাবস্ক্রিপশন সফল হয়েছে।";
-  e.target.reset();
-});
-
-// ডার্ক ও লাইট মোড টগল
 const root = document.documentElement;
 const tg = document.getElementById("tg");
 const mq = matchMedia("(prefers-color-scheme:dark)");
@@ -595,7 +603,6 @@ tg.addEventListener("click", () => {
 mq.addEventListener("change", paintTheme);
 paintTheme();
 
-// ইনিশিয়াল রেন্ডার
 render();
 </script>
 </body>
