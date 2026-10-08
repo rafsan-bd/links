@@ -6,14 +6,15 @@
 <title>বাছাই খাতা – ইসলামিক পণ্য, হোস্টিং, AI ও গ্যাজেটের সৎ বাছাই</title>
 <meta name="description" content="ইসলামিক বই, সুন্নাহ খাদ্য, ক্লাউড হোস্টিং ও প্রিমিয়াম গ্যাজেটের বিশ্বস্ত রিভিউ ও সততাপূর্ণ সুপারিশ হাব।">
 
-<!-- Brevo CSS -->
-<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
-
-<!-- ফন্ট ও আইকন -->
+<!-- ফন্ট, আইকন ও CSV পার্সার -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@600;700;800&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+<!-- Brevo CSS -->
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 
 <style>
 :root{
@@ -93,6 +94,7 @@ nav a:hover{color:var(--ink)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--acc);color:var(--accink);padding:10px 22px;border-radius:12px;font-weight:700;border:0;cursor:pointer;font-size:16px;font-family:inherit;transition:.2s}
 .btn:hover{background:var(--acc-hover);filter:brightness(1.05)}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--ink)}
 .btn-sm{padding:7px 14px;font-size:14px;border-radius:9px}
 
 .feat{background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:24px;box-shadow:0 10px 25px rgba(0,0,0,0.04);position:relative}
@@ -140,6 +142,7 @@ nav a:hover{color:var(--ink)}
 .btn-copy{background:var(--badge-bg);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:0 14px;cursor:pointer;font-size:15px;transition:.2s}
 .btn-copy:hover{border-color:var(--ink)}
 
+#loader{text-align:center;padding:40px;grid-column:1/-1;color:var(--mute);font-weight:600}
 #emptyState{display:none;text-align:center;padding:50px 20px;grid-column:1/-1}
 #emptyState i{font-size:48px;color:var(--mute);margin-bottom:14px}
 
@@ -148,12 +151,10 @@ nav a:hover{color:var(--ink)}
 .how h3{font-size:19px;margin-bottom:6px}
 .how p{margin:0;color:var(--mute);font-size:15px}
 
-/* Brevo ইন্টিগ্রেটেড নিউজলেটার বক্স */
 .news{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px;display:grid;grid-template-columns:1fr 1.2fr;gap:28px;align-items:center}
 .news h2{font-size:28px}
 .news p{color:var(--mute);margin:8px 0 0;font-size:16px}
 
-/* Brevo মেসেজ প্যানেল ওভাররাইড */
 :where(.sib-form-message-panel){display:none;padding:12px;margin-bottom:12px;border-radius:10px;font-size:14px}
 #error-message{background:#ffeded;color:#661d1d;border:1px solid #ff4949}
 #success-message{background:#e7faf0;color:#085229;border:1px solid #13ce66}
@@ -238,7 +239,9 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
     <div class="tabs" role="group" aria-label="ক্যাটাগরি ফিল্টার" id="tabs"></div>
   </div>
 
-  <div class="grid" id="grid"></div>
+  <div class="grid" id="grid">
+    <div id="loader"><i class="fa-solid fa-spinner fa-spin mr-2"></i> শিট থেকে প্রোডাক্ট লোড হচ্ছে...</div>
+  </div>
 
   <div id="emptyState">
     <i class="fa-regular fa-folder-open"></i>
@@ -266,7 +269,7 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
   </div>
 </section>
 
-<!-- ================= Brevo ইন্টিগ্রেটেড নিউজলেটার সেকশন ================= -->
+<!-- ================= Brevo নিউজলেটার সেকশন ================= -->
 <section id="join" style="padding-bottom:30px">
   <div class="news">
     <div>
@@ -275,32 +278,24 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
     </div>
 
     <div id="sib-form-container">
-      <!-- এরর মেসেজ প্যানেল -->
       <div id="error-message" class="sib-form-message-panel">
         <span class="sib-form-message-panel__inner-text">
-          <i class="fa-solid fa-triangle-exclamation mr-1"></i> সাবস্ক্রিপশন ব্যর্থ হয়েছে। অনুগ্রহ করে সঠিক ইমেইল দিয়ে আবার চেষ্টা করুন।
+          <i class="fa-solid fa-triangle-exclamation mr-1"></i> সাবস্ক্রিপশন ব্যর্থ হয়েছে। সঠিক ইমেইল দিয়ে আবার চেষ্টা করুন।
         </span>
       </div>
 
-      <!-- সাকসেস মেসেজ প্যানেল -->
       <div id="success-message" class="sib-form-message-panel">
         <span class="sib-form-message-panel__inner-text">
           <i class="fa-solid fa-circle-check mr-1"></i> আলহামদুলিল্লাহ! আপনার সাবস্ক্রিপশন সফল হয়েছে।
         </span>
       </div>
 
-      <!-- Brevo ফর্ম -->
       <form id="sib-form" method="POST" action="https://f4ff26c9.sibforms.com/serve/MUIFAE-fhyBCmuOFvBRkXU6WrE6ASEyWZx6z2KyA-frJUJHqNd8VM9VuPgQd8OFFhgDc9KUTE7VvOWd5laNUQf4WvSzbDf82HW4-WTWPkNlJ1tg1fpTXRzuLwpHTdrx0QjYmLfGk-mL57Bpc_CqK1M5V33TfBvRQ_AADaiBJ9V196jUY9gL84tkYDixB7ciMCNX0AWSKR79_E2qTag==" data-type="subscription">
-        
         <div class="brevo-form-row">
           <input class="brevo-input" type="email" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="yourname@gmail.com" required>
-          <button class="btn" form="sib-form" type="submit">
-            যুক্ত হোন
-          </button>
+          <button class="btn" form="sib-form" type="submit">যুক্ত হোন</button>
         </div>
-
-        <!-- স্প্যাম ও বট ফিল্টার (গোপন ইনপুট) -->
-         <input type="text" name="email_address_check" value="" class="input--hidden">
+        <input type="text" name="email_address_check" value="" class="input--hidden">
         <input type="hidden" name="locale" value="en">
       </form>
     </div>
@@ -314,12 +309,11 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
 
 </div>
 
-<!-- ফ্লোটিং হোয়াটসঅ্যাপ বাটন -->
 <a href="https://wa.me/8801410133963" class="wa-float" target="_blank" rel="noopener" aria-label="হোয়াটসঅ্যাপে প্রশ্ন করুন">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-<!-- ================= Brevo স্ক্রিপ্ট ================= -->
+<!-- Brevo স্ক্রিপ্ট -->
 <script>
   window.REQUIRED_CODE_ERROR_MESSAGE = 'Please choose a country code';
   window.LOCALE = 'en';
@@ -338,149 +332,14 @@ footer{border-top:1px solid var(--line);margin-top:50px;padding:30px 0 40px;colo
 </script>
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
-<!-- ================= সাইট লজিক স্ক্রিপ্ট ================= -->
+<!-- ================= গুগল শিট অটোমেশন স্ক্রিপ্ট ================= -->
 <script>
-const PRODUCTS = [
-  {
-    id: "hostinger",
-    name: "Hostinger Web Hosting",
-    cat: "ওয়েব হোস্টিং",
-    store: "Hostinger",
-    icon: "🌐",
-    image: "https://wpshower.com/wp-content/uploads/2024/11/hostinger.jpg",
-    score: 8.8,
-    price: "৳ ২৯৯/মাস",
-    oldPrice: "৳ ৭৯৯",
-    discount: "৭৫% ছাড়",
-    blurb: "নতুন ওয়েবসাইট বা ব্লগ বানানোর জন্য দ্রুতগতির হোস্টিং ও সহজ hPanel কন্ট্রোল প্যানেল।",
-    pros: ["ফ্রি SSL ও ডোমেইন সুবিধা", "২৪/৭ কাস্টমার সাপোর্ট"],
-    cons: ["পরবর্তী বছর নবায়নে খরচ কিছুটা বাড়ে"],
-    url: "https://www.hostinger.com?REFERRALCODE=D15RAFSANLC3",
-    btn: "অফার দেখুন"
-  },
-  {
-    id: "quran-tafsir",
-    name: "তাফসীরে তাওযীহুল কুরআন (৩ খণ্ড)",
-    cat: "ইসলামিক বই",
-    store: "রকমারি",
-    icon: "📖",
-    image: "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=400&q=80",
-    score: 9.6,
-    price: "৳ ১,৪৫০",
-    oldPrice: "৳ ১,৮৫০",
-    discount: "২২% ছাড়",
-    blurb: "মুফতী তাকী উসমানী (দা.বা.)-এর রচিত সহজ-সরল ও আধুনিক সমসাময়িক প্রাঞ্জল তাফসীর সংকলন।",
-    pros: ["সহজ ও সাবলীল অনুবাদ", "উন্নত মানের বাঁধাই ও কাগজ"],
-    cons: ["৩টি খণ্ড মিলিয়ে সাইজে বেশ ভারী"],
-    url: "https://rokomari.com",
-    btn: "রকমারি লিংক"
-  },
-  {
-    id: "seerah-raheeq",
-    name: "আর-রাহীকুল মাখতূম",
-    cat: "ইসলামিক বই",
-    store: "রকমারি",
-    icon: "📕",
-    image: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&q=80",
-    score: 9.5,
-    price: "৳ ৫২০",
-    oldPrice: "৳ ৬৫০",
-    discount: "২০% ছাড়",
-    blurb: "রাবেতা আল-আলম আল-ইসলামী কর্তৃক প্রথম পুরস্কারপ্রাপ্ত রাসুল (সা.)-এর প্রামাণ্য জীবনী গ্রন্থ।",
-    pros: ["সম্পূর্ণ প্রামাণ্য ও নির্ভরযোগ্য", "ইতিহাসের এক চমৎকার সংকলন"],
-    cons: ["তাত্ত্বিক আলোচনা থাকায় ধীরেসুস্থে পড়তে হয়"],
-    url: "https://rokomari.com",
-    btn: "সংগ্রহ করুন"
-  },
-  {
-    id: "honey-khalisa",
-    name: "খাঁটি সুন্দরবনের খলিসা মধু",
-    cat: "সুন্নাহ খাদ্য",
-    store: "ওয়াফিলাইফ",
-    icon: "🍯",
-    image: "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&q=80",
-    score: 9.1,
-    price: "৳ ৮৫০",
-    oldPrice: "৳ ১,০৫০",
-    discount: "১৯% ছাড়",
-    blurb: "কোনো প্রকার প্রসেসিং বা চিনিমুক্ত ১০০% প্রাকৃতিক সুন্দরবনের কাঁচা খলিসা ফুলের মধু।",
-    pros: ["ন্যাচারাল ফ্রুট ফ্লেভার ও ঘ্রাণ", "ল্যাবে টেস্ট করা খাঁটি মধু"],
-    cons: ["মৌসুম ছাড়া স্টক দ্রুত শেষ হয়"],
-    url: "https://wafilife.com",
-    btn: "অর্ডার লিংক"
-  },
-  {
-    id: "ajwa-dates",
-    name: "মদিনার প্রিমিয়াম আজওয়া খেজুর",
-    cat: "সুন্নাহ খাদ্য",
-    store: "দারাজ",
-    icon: "🌴",
-    image: "https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&q=80",
-    score: 9.3,
-    price: "৳ ১,২০০",
-    oldPrice: "৳ ১,৫০০",
-    discount: "২০% ছাড়",
-    blurb: "মদিনা থেকে সরাসরি সংগৃহীত নরম ও সুস্বাদু ১ কেজি সাইজের সিলপ্যাক আজওয়া খেজুর।",
-    pros: ["হাদিস বর্ণিত ফজিলতপূর্ণ খাবার", "ফ্রেশ ও রসাল টেক্সচার"],
-    cons: ["বাজারে সাধারণ খেজুরের চেয়ে দাম বেশি"],
-    url: "https://daraz.com.bd",
-    btn: "দারাজে দেখুন"
-  },
-  {
-    id: "tasbih-smart",
-    name: "ডিজিটাল রিচার্জেবল স্মার্ট তাসবিহ",
-    cat: "ইবাদত সামগ্রী",
-    store: "দারাজ",
-    icon: "📿",
-    image: "https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=400&q=80",
-    score: 8.4,
-    price: "৳ ৩৫০",
-    oldPrice: "৳ ৫৫০",
-    discount: "৩৬% ছাড়",
-    blurb: "আঙুলে পরার উপযোগী নরম সিলিকন স্ট্র্যাপ ও এলইডি ডিসপ্লেযুক্ত ফিঙ্গার কাউন্টার।",
-    pros: ["নিঃশব্দে ক্লিকিং", "টাইপ-সি পোর্টে দ্রুত চার্জ"],
-    cons: ["প্লাস্টিক বডি বেশি শক্ত নয়"],
-    url: "https://daraz.com.bd",
-    btn: "দাম দেখুন"
-  },
-  {
-    id: "padded-janamaz",
-    name: "মেমোরি ফোম অর্থোপেডিক জায়নামাজ",
-    cat: "ইবাদত সামগ্রী",
-    store: "দারাজ",
-    icon: "🕌",
-    image: "",
-    score: 8.9,
-    price: "৳ ১,১০০",
-    oldPrice: "৳ ১,৪০০",
-    discount: "২১% ছাড়",
-    blurb: "হাঁটু ও পায়ের জয়েন্টে ব্যথা উপশমে বিশেষভাবে তৈরি আরামদায়ক নরম ফোমের জায়নামাজ।",
-    pros: ["বয়স্কদের দীর্ঘ নামাজের জন্য চমৎকার", "অ্যান্টি-স্লিপ গ্রিপ"],
-    cons: ["ভ্রমণে সহজে পকেটে নেওয়া যায় না"],
-    url: "https://daraz.com.bd",
-    btn: "দাম দেখুন"
-  },
-  {
-    id: "gan-charger",
-    name: "Ugreen ৬৫W GaN ফাস্ট চার্জার",
-    cat: "গ্যাজেট",
-    store: "দারাজ",
-    icon: "🔌",
-    image: "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=400&q=80",
-    score: 9.3,
-    price: "৳ ২,২৫০",
-    oldPrice: "৳ ২,৮০০",
-    discount: "২০% ছাড়",
-    blurb: "একটি ছোট অ্যাডাপ্টার দিয়েই ল্যাপটপ, ফোন ও পাওয়ার ব্যাংক একসাথে দ্রুত চার্জ করা যায়।",
-    pros: ["কমপ্যাক্ট ট্রাভেল সাইজ", "৩টি মাল্টিপল পোর্ট"],
-    cons: ["একটু হালকা গরম হয়"],
-    url: "https://daraz.com.bd",
-    btn: "দাম দেখুন"
-  }
-];
+// !!! নিচের কোটেশনের ভেতর আপনার গুগল শিট থেকে পাওয়া আসল CSV লিংকটি বসিয়ে দিন !!!
+const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRMZ6D1dg-WPGd7LWdsOOTCLpdxybDKfyzJ-oJOK2hQ-EhURcypoehOByU6atAda68rW405ZXOAJZlA/pub?output=csv";
 
+let PRODUCTS = [];
 const ALL = "সব";
-const cats = [ALL, ...new Set(PRODUCTS.map(p => p.cat))];
+let cats = [ALL];
 const tabs = document.getElementById("tabs");
 const grid = document.getElementById("grid");
 const searchInput = document.getElementById("searchInput");
@@ -490,7 +349,41 @@ let activeCat = ALL;
 let searchQuery = "";
 
 const bn = n => n.toLocaleString("bn-BD", {minimumFractionDigits: 1});
-function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function esc(s){ return String(s || '').replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+// গুগল শিট থেকে ডাটা ফেচ
+function fetchSheetData() {
+  Papa.parse(SHEET_CSV_URL, {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function(results) {
+      PRODUCTS = results.data.map((row, i) => ({
+        id: `prod-${i}`,
+        name: row.name || "নামহীন পণ্য",
+        cat: row.cat || "অন্যান্য",
+        store: row.store || "অনলাইন",
+        icon: row.icon || "📦",
+        image: row.image || "",
+        score: parseFloat(row.score) || 9.0,
+        price: row.price || "",
+        oldPrice: row.oldPrice || "",
+        discount: row.discount || "",
+        blurb: row.blurb || "",
+        pros: row.pros ? row.pros.split(',').map(s => s.trim()) : [],
+        cons: row.cons ? row.cons.split(',').map(s => s.trim()) : [],
+        url: row.url || "#",
+        btn: row.btn || "সংগ্রহ করুন"
+      }));
+
+      cats = [ALL, ...new Set(PRODUCTS.map(p => p.cat).filter(Boolean))];
+      render();
+    },
+    error: function() {
+      grid.innerHTML = `<div id="loader" style="color:var(--bad)">গুগল শিট থেকে ডাটা লোড করা যায়নি। অনুগ্রহ করে CSV লিংকটি চেক করুন।</div>`;
+    }
+  });
+}
 
 function render(){
   tabs.innerHTML = cats.map(c => 
@@ -514,16 +407,16 @@ function render(){
   grid.innerHTML = filtered.map(p => `
   <article class="card">
     <div class="card-top">
-      <span class="store-badge"><i class="fa-solid fa-store mr-1"></i>${esc(p.store || "অনলাইন")}</span>
+      <span class="store-badge"><i class="fa-solid fa-store mr-1"></i>${esc(p.store)}</span>
       <span class="score" aria-label="রেটিং ${bn(p.score)}">★ ${bn(p.score)}</span>
     </div>
 
     <div class="img-box">
       ${p.image ? `
         <img src="${esc(p.image)}" alt="${esc(p.name)}" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
-        <div class="fallback-ic" style="display:none">${esc(p.icon || "📦")}</div>
+        <div class="fallback-ic" style="display:none">${esc(p.icon)}</div>
       ` : `
-        <div class="fallback-ic">${esc(p.icon || "📦")}</div>
+        <div class="fallback-ic">${esc(p.icon)}</div>
       `}
     </div>
 
@@ -533,7 +426,7 @@ function render(){
     </div>
 
     <div class="price-row">
-      <span class="curr-price">${esc(p.price || "")}</span>
+      <span class="curr-price">${esc(p.price)}</span>
       ${p.oldPrice ? `<span class="old-price">${esc(p.oldPrice)}</span>` : ""}
       ${p.discount ? `<span class="disc-pill">${esc(p.discount)}</span>` : ""}
     </div>
@@ -546,8 +439,8 @@ function render(){
     </ul>
 
     <div class="card-actions">
-      <a class="btn btn-sm" href="${esc(p.url)}" data-aff="${esc(p.id)}" rel="sponsored noopener" target="_blank">
-        ${esc(p.btn || "সংগ্রহ করুন")} <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+      <a class="btn btn-sm" href="${esc(p.url)}" rel="sponsored noopener" target="_blank">
+        ${esc(p.btn)} <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
       </a>
       <button class="btn-copy" onclick="copyLink('${esc(p.url)}')" title="লিংক কপি করুন" type="button">
         <i class="fa-regular fa-clone"></i>
@@ -575,6 +468,7 @@ function copyLink(url){
   });
 }
 
+// থিম টগল
 const root = document.documentElement;
 const tg = document.getElementById("tg");
 const mq = matchMedia("(prefers-color-scheme:dark)");
@@ -583,7 +477,6 @@ const eff = () => root.dataset.theme || (mq.matches ? "dark" : "light");
 function paintTheme(){
   const isDark = eff() === "dark";
   tg.innerHTML = isDark ? "☀️" : "🌙";
-  tg.setAttribute("aria-label", isDark ? "লাইট মোডে যান" : "ডার্ক মোডে যান");
 }
 
 try{
@@ -601,7 +494,8 @@ tg.addEventListener("click", () => {
 mq.addEventListener("change", paintTheme);
 paintTheme();
 
-render();
+// ডাটা লোড কল
+fetchSheetData();
 </script>
 </body>
 </html>
